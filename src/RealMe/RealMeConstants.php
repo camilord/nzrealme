@@ -52,16 +52,16 @@ class RealMeConstants
      * @param string $env
      * @return string[][]
      */
-    public static function get_idp_entity_ids(string $env = self::ENV_MTS) {
+    public static function get_idp_entity_id(string $env = self::ENV_MTS) {
         return [
             self::ENV_MTS => [
-                self::TYPE_LOGIN  => 'https://mts.login.realme.govt.nz/4af8e0e0-497b-4f52-805c-00fa09b50c16/B2C_1A_DIA_RealMe_MTSLoginService',
-                self::TYPE_ASSERT => 'https://mts.login.realme.govt.nz/4af8e0e0-497b-4f52-805c-00fa09b50c16/B2C_1A_DIA_RealMe_MTSAssertionService'
+                self::TYPE_LOGIN  => 'https://mts.realme.govt.nz/saml2',
+                self::TYPE_ASSERT => 'https://mts.realme.govt.nz/saml2/assertion'
             ],
 
             self::ENV_ITE => [
-                self::TYPE_LOGIN  => 'https://ite.login.realme.govt.nz/12c36372-4b2d-4865-b1d1-9599b0d37348/B2C_1A_DIA_RealMe_LoginService',
-                self::TYPE_ASSERT => 'https://ite.login.realme.govt.nz/12c36372-4b2d-4865-b1d1-9599b0d37348/B2C_1A_DIA_RealMe_AssertionService'
+                self::TYPE_LOGIN  => 'https://www.ite.logon.realme.govt.nz/saml2',
+                self::TYPE_ASSERT => 'https://www.ite.logon.realme.govt.nz/saml2/assertion'
             ],
 
             self::ENV_PROD => [
@@ -75,7 +75,7 @@ class RealMeConstants
      * @param string $env
      * @return string[][]
      */
-    public static function get_idp_sso_service_urls(string $env = self::ENV_MTS) {
+    public static function get_idp_sso_service_url(string $env = self::ENV_MTS) {
         return [
             self::ENV_MTS => array(
                 self::TYPE_LOGIN  => 'https://mts.login.realme.govt.nz/4af8e0e0-497b-4f52-805c-00fa09b50c16/B2C_1A_DIA_RealMe_MTSLoginService/samlp/sso/login',
@@ -88,8 +88,8 @@ class RealMeConstants
             ),
 
             self::ENV_PROD => array(
-                self::TYPE_LOGIN  => 'https://www.logon.realme.govt.nz/sso/logon/metaAlias/logon/logonidp',
-                self::TYPE_ASSERT => 'https://www.assert.realme.govt.nz/sso/SSORedirect/metaAlias/assertion/realmeidp'
+                self::TYPE_LOGIN  => 'https://login.realme.govt.nz/32179062-92f6-4eb0-89bc-df400a9e0367/B2C_1A_DIA_RealMe_LoginService/Samlp/sso/login',
+                self::TYPE_ASSERT => 'https://login.realme.govt.nz/32179062-92f6-4eb0-89bc-df400a9e0367/B2C_1A_DIA_RealMe_LoginService/Samlp/sso/login'
             )
         ];
     }

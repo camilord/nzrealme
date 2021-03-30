@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<samlp:AuthnRequest
+        xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"
+        xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
+        ID="ABCS_4d26329550058294b01f577db10cc6e6ee125f8b"
+        Version="2.0"
+        IssueInstant="2021-03-30T19:26:23Z"
+        Destination="https://mts.realme.govt.nz/logon-mts/mtsEntryPoint"
+        AssertionConsumerServiceIndex="1">
+    <saml:Issuer>http://sample.com</saml:Issuer>
+    <samlp:NameIDPolicy
+            AllowCreate="true"
+            Format="urn:oasis:names:tc:SAML:2.0:nameid-format:persistent"></samlp:NameIDPolicy>
+    <samlp:RequestedAuthnContext Comparison="exact">
+        <saml:AuthnContextClassRef>urn:nzl:govt:ict:stds:authn:deployment:GLS:SAML:2.0:ac:classes:LowStrength</saml:AuthnContextClassRef>
+    </samlp:RequestedAuthnContext>
+</samlp:AuthnRequest>
